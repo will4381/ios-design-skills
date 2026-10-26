@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft Flows"
+  short_description: "Improve complete flows while preserving user state"
+  default_prompt: "Use $web-craft-flows to plan a clearer flow with state, recovery, and acceptance checks before implementation."

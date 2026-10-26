@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft Verify"
+  short_description: "Validate app quality with explicit evidence limits"
+  default_prompt: "Use $web-craft-verify to verify the named journeys at focused depth and separate browser results from device checks."

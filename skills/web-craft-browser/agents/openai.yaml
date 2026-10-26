@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft Browser"
+  short_description: "Verify browser APIs, Safari behavior, and fallbacks"
+  default_prompt: "Use $web-craft-browser to assess useful Safari and mobile APIs, including haptics, with support evidence and fallbacks."

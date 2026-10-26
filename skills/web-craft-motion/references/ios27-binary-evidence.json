@@ -1,0 +1,103 @@
+{
+  "runtime": {
+    "version": "27.0",
+    "build": "24A434",
+    "architecture": "arm64",
+    "type": "Apple iOS Simulator runtime"
+  },
+  "QuartzCore": {
+    "sha256": "5678dd80f386d1b9af6d34a8bcf84edf8256cfded5f949d45347e22d9bba6482",
+    "uuid": "1c85c80f98f935aaa5687951fa31ebf2",
+    "size_bytes": 5480264,
+    "constants": {
+      "two_pi": {
+        "address": "0x1c3bafc28",
+        "double": 6.283185307179586
+      },
+      "four_pi": {
+        "address": "0x1c3bb05c0",
+        "double": 12.566370614359172
+      },
+      "settling_epsilon": {
+        "address": "0x1c3baf8e0",
+        "double": 0.001
+      },
+      "minimum_epsilon": {
+        "address": "0x1c3baf850",
+        "double": 1e-06
+      }
+    },
+    "follow_up_symbols": {
+      "spring_state_update": "0x1c3b45928",
+      "spring_state_eval": "0x1c3b459cc",
+      "spring_state_eval_derivative": "0x1c3b45aac",
+      "duration_for_epsilon": "0x1c3afadd4"
+    }
+  },
+  "UIKitCore": {
+    "sha256": "dd7028fd8ac9330e54449d7cb88cc64337b2474175d9e7d4359da6ff8a75e5a1",
+    "uuid": "e9cbebe9bfee3385af52d32c606e46be",
+    "size_bytes": 65096920,
+    "constants": {
+      "two_pi": {
+        "address": "0x1c5718288",
+        "double": 6.283185307179586
+      },
+      "scroll_deceleration_normal": {
+        "address": "0x1c56d8678",
+        "double": 0.998
+      },
+      "scroll_deceleration_fast": {
+        "address": "0x1c56d8680",
+        "double": 0.99
+      }
+    },
+    "rubber_band": {
+      "function_address": "0x1c4e3f35c",
+      "coefficient_selector_address": "0x1c4e3f3f8",
+      "formula": "sign(d)*L*(1-1/(1+c*abs(d)/L))",
+      "conditions": "Signed displacement d beyond a boundary; L>0, c>0; in-bounds offsets unchanged",
+      "selector_defaults": {
+        "1": 0.715,
+        "2": 0.17,
+        "3": 0.4,
+        "4": 0.17,
+        "5": 0.5,
+        "other": 0.55
+      },
+      "limits": "Preference override paths exist; selector meanings and active per-component choices not established"
+    }
+  },
+  "method": "Static disassembly and manual reconstruction; no execution of inspected routines",
+  "tools": {
+    "xcode": "27.0 (27A266a)",
+    "ipsw": "3.1.739",
+    "ipsw_archive_sha256": "c09e8eba02c332f5b50d15f94383e59dd35646d70f6ea9e78d185e9afda6abc2"
+  },
+  "calculated_examples": [
+    {
+      "response_seconds": 0.3,
+      "bounce": -0.5,
+      "damping_ratio": 2.0,
+      "mass": 1,
+      "stiffness": 438.6490844928604,
+      "damping": 83.77580409572782
+    },
+    {
+      "response_seconds": 0.3,
+      "bounce": 0,
+      "damping_ratio": 1,
+      "mass": 1,
+      "stiffness": 438.6490844928604,
+      "damping": 41.88790204786391
+    },
+    {
+      "response_seconds": 0.3,
+      "bounce": 0.2,
+      "damping_ratio": 0.8,
+      "mass": 1,
+      "stiffness": 438.6490844928604,
+      "damping": 33.51032163829113
+    }
+  ]
+}

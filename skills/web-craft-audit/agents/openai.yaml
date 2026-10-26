@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft Audit"
+  short_description: "Find evidence-backed interaction and UX defects"
+  default_prompt: "Use $web-craft-audit to inspect three frequent journeys at focused depth and rank actionable findings."

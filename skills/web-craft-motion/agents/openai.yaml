@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft Motion"
+  short_description: "Tune motion, gestures, and rendering performance"
+  default_prompt: "Use $web-craft-motion to audit interruption, velocity, reduced motion, and frame pacing in this interaction."

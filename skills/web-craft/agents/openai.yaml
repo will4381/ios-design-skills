@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft"
+  short_description: "Coordinate app quality work by mode and depth"
+  default_prompt: "Use $web-craft to audit the named app journey at focused depth without changing app code."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Craft Polish"
+  short_description: "Refine tiny component details across every state"
+  default_prompt: "Use $web-craft-polish to audit component states, editing, focus, typography, and touch details without a redesign."

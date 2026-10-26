@@ -1,0 +1,1258 @@
+{
+  "retrieved": "2026-10-25",
+  "source": "mdn/browser-compat-data main",
+  "files": [
+    {
+      "path": "api/Navigator.json",
+      "sha256": "4f9206093cdc738d25456bce0fb2682e78336ec6c73a3b84816def49893295c3",
+      "records": {
+        "vibrate": {
+          "support": {
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "32"
+            },
+            "chrome_android": {
+              "version_added": "32",
+              "notes": [
+                "Beginning in Chrome 55, this is not supported in cross-origin iframes.",
+                "Beginning in Chrome 60, this method requires a user gesture. Otherwise it returns `false`."
+              ]
+            },
+            "firefox": [
+              {
+                "version_added": "16",
+                "version_removed": "129",
+                "notes": [
+                  "Until Firefox 26 included, when the vibration pattern was too long or any of its elements too large, Firefox threw an exception instead of returning `false` ([bug 884935](https://bugzil.la/884935)).",
+                  "From Firefox 32 onwards, when the vibration pattern is too long or any of its elements too large, it returns `true` but truncates the pattern ([bug 1014581](https://bugzil.la/1014581)).",
+                  "Beginning in Firefox 72, this is not supported in cross-origin iframes."
+                ]
+              },
+              {
+                "prefix": "moz",
+                "version_added": "11",
+                "version_removed": "16"
+              }
+            ]
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/vibrate"
+        },
+        "share": {
+          "support": {
+            "safari": {
+              "version_added": "12.1"
+            },
+            "safari_ios": "mirror",
+            "chrome": [
+              {
+                "version_added": "128"
+              },
+              {
+                "version_added": "89",
+                "version_removed": "128",
+                "partial_implementation": true,
+                "notes": "Only supported on ChromeOS and Windows, see [bug 40542648](https://crbug.com/40542648) and [bug 40729163](https://crbug.com/40729163)."
+              }
+            ],
+            "chrome_android": {
+              "version_added": "61"
+            },
+            "firefox": {
+              "version_added": "71",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.webshare.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/share"
+        },
+        "canShare": {
+          "support": {
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": "mirror",
+            "chrome": [
+              {
+                "version_added": "128"
+              },
+              {
+                "version_added": "89",
+                "version_removed": "128",
+                "partial_implementation": true,
+                "notes": "Only supported on ChromeOS and Windows, see [bug 40542648](https://crbug.com/40542648) and [bug 40729163](https://crbug.com/40729163)."
+              }
+            ],
+            "chrome_android": {
+              "version_added": "75"
+            },
+            "firefox": {
+              "version_added": "96",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.webshare.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/canShare"
+        },
+        "virtualKeyboard": {
+          "support": {
+            "safari": {
+              "version_added": false,
+              "impl_url": "https://webkit.org/b/230225"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "94"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": false,
+              "impl_url": "https://bugzil.la/1730568"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/virtualKeyboard"
+        },
+        "wakeLock": {
+          "support": {
+            "safari": {
+              "version_added": "16.4"
+            },
+            "safari_ios": [
+              {
+                "version_added": "18.4"
+              },
+              {
+                "version_added": "16.4",
+                "version_removed": "18.4",
+                "partial_implementation": true,
+                "notes": "Does not work in standalone Home Screen Web Apps. See [bug 254545](https://webkit.org/b/254545#c32)."
+              }
+            ],
+            "chrome": {
+              "version_added": "84"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "126"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/wakeLock"
+        },
+        "setAppBadge": {
+          "support": {
+            "safari": {
+              "version_added": "17",
+              "notes": [
+                "Badging is supported for installed web apps on macOS Sonoma and higher.",
+                "Passing `0` as an argument will clear the badge instead of displaying an unnumbered dot."
+              ]
+            },
+            "safari_ios": {
+              "version_added": "16.4",
+              "notes": [
+                "Badging is supported for web apps saved to the home screen.",
+                "Passing `0` as an argument will clear the badge instead of displaying an unnumbered dot."
+              ]
+            },
+            "chrome": {
+              "version_added": "81",
+              "notes": [
+                "Windows and macOS since Chrome 81.",
+                "ChromeOS since Chrome 91.",
+                "Linux offers no universal badging API on the operating system level."
+              ]
+            },
+            "chrome_android": {
+              "version_added": false
+            },
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/setAppBadge"
+        },
+        "clearAppBadge": {
+          "support": {
+            "safari": {
+              "version_added": "17",
+              "notes": "Badging is supported for installed web apps on macOS Sonoma and higher."
+            },
+            "safari_ios": {
+              "version_added": "16.4",
+              "notes": "Badging is supported for web apps saved to the home screen."
+            },
+            "chrome": {
+              "version_added": "81",
+              "notes": [
+                "Windows and macOS since Chrome 81.",
+                "ChromeOS since Chrome 91.",
+                "Linux offers no universal badging API on the operating system level."
+              ]
+            },
+            "chrome_android": {
+              "version_added": "81"
+            },
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/clearAppBadge"
+        },
+        "getBattery": {
+          "support": {
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "38"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "43",
+              "version_removed": "52"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/getBattery"
+        },
+        "connection": {
+          "support": {
+            "safari": {
+              "version_added": false,
+              "impl_url": "https://webkit.org/b/185697"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "61"
+            },
+            "chrome_android": {
+              "version_added": "38"
+            },
+            "firefox": {
+              "version_added": "31",
+              "version_removed": "32"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/connection"
+        },
+        "deviceMemory": {
+          "support": {
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "63",
+              "notes": [
+                "From Chrome 147, reported values are 2, 4, 8, 16, and 32.",
+                "Before Chrome 147, reported values were 0.25, 0.5, 1, 2, 4, and 8."
+              ]
+            },
+            "chrome_android": {
+              "version_added": "63",
+              "notes": [
+                "From Chrome 147, reported values are 1, 2, 4, and 8.",
+                "Before Chrome 147, reported values were 0.25, 0.5, 1, 2, 4, and 8."
+              ]
+            },
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/deviceMemory"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/Navigator.json"
+    },
+    {
+      "path": "api/Window.json",
+      "sha256": "5a5cfaee2e938086c5f3cef74ad6b39086a12ab69d5576ba0c4183a63512dc51",
+      "records": {
+        "showOpenFilePicker": {
+          "support": {
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "86"
+            },
+            "chrome_android": {
+              "version_added": "132"
+            },
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/showOpenFilePicker"
+        },
+        "showSaveFilePicker": {
+          "support": {
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "86"
+            },
+            "chrome_android": {
+              "version_added": "132"
+            },
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/showSaveFilePicker"
+        },
+        "beforeinstallprompt_event": {
+          "support": {
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": "mirror",
+            "chrome": [
+              {
+                "version_added": "61"
+              },
+              {
+                "version_added": "44",
+                "version_removed": "61",
+                "partial_implementation": true,
+                "notes": "The `onbeforeinstallprompt` event handler property is not supported."
+              }
+            ],
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/beforeinstallprompt_event"
+        },
+        "visualViewport": {
+          "support": {
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "61"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "91"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/visualViewport"
+        },
+        "navigation": {
+          "support": {
+            "safari": {
+              "version_added": "26.2"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "102"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "147"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/navigation"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/Window.json"
+    },
+    {
+      "path": "api/Document.json",
+      "sha256": "de66d3caef05341e60ec08fd2b2ea65ee27df7f445851c7f076135c93ffe4aaa",
+      "records": {
+        "startViewTransition": {
+          "support": {
+            "safari": {
+              "version_added": "18"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "111"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "144"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/startViewTransition"
+        },
+        "scrollend_event": {
+          "support": {
+            "safari": {
+              "version_added": "26.2"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "114"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "109"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/scrollend_event"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/Document.json"
+    },
+    {
+      "path": "api/HTMLElement.json",
+      "sha256": "ff68c2126222f12a7ac080381cd6fd57ae0bf48bec6b263d496ec2dad5d8e6e9",
+      "records": {
+        "popover": {
+          "support": {
+            "safari": {
+              "version_added": "17"
+            },
+            "safari_ios": [
+              {
+                "version_added": "18.3"
+              },
+              {
+                "version_added": "17",
+                "version_removed": "18.3",
+                "partial_implementation": true,
+                "notes": "On iOS and iPadOS, popovers are not dismissed when the user taps outside of the popover area, see [bug 267688](https://webkit.org/b/267688)."
+              }
+            ],
+            "chrome": {
+              "version_added": "114"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "125"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/popover"
+        },
+        "inert": {
+          "support": {
+            "safari": {
+              "version_added": "15.5"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "102"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "112"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/inert"
+        },
+        "showPopover": {
+          "support": {
+            "safari": {
+              "version_added": "17"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "114"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "125"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/showPopover"
+        },
+        "hidePopover": {
+          "support": {
+            "safari": {
+              "version_added": "17"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "114"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "125"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/hidePopover"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/HTMLElement.json"
+    },
+    {
+      "path": "api/HTMLInputElement.json",
+      "sha256": "6a30daedd20856ab26f3c8151b36bb0a6e4c3723fca6d270a68ceed9a45dc9cb",
+      "records": {
+        "showPicker": {
+          "support": {
+            "safari": {
+              "version_added": "16"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "99"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "101"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/showPicker"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/HTMLInputElement.json",
+      "subfeatures": {
+        "autocomplete_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": "mirror",
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/234009"
+          },
+          "safari_ios": "mirror",
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "color_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": "101"
+          },
+          "firefox_android": "mirror",
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "16"
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "datalist_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": "149"
+          },
+          "firefox_android": {
+            "version_added": false,
+            "impl_url": "https://bugzil.la/1535985"
+          },
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "preview"
+          },
+          "safari_ios": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/261703"
+          },
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "date_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": "101"
+          },
+          "firefox_android": "mirror",
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "17.4"
+          },
+          "safari_ios": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/261703"
+          },
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "datetime_local_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": "101"
+          },
+          "firefox_android": "mirror",
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "17.4"
+          },
+          "safari_ios": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/261703"
+          },
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "file_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": "101"
+          },
+          "firefox_android": "mirror",
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "16"
+          },
+          "safari_ios": "mirror",
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "month_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": [
+            {
+              "version_added": "121"
+            },
+            {
+              "version_added": "101",
+              "version_removed": "112"
+            }
+          ],
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/234009"
+          },
+          "safari_ios": "mirror",
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "time_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": "101"
+          },
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "16"
+          },
+          "safari_ios": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/261703"
+          },
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "week_input": {
+          "chrome": {
+            "version_added": "99"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": [
+            {
+              "version_added": "121"
+            },
+            {
+              "version_added": "101",
+              "version_removed": "112"
+            }
+          ],
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": false,
+            "impl_url": "https://webkit.org/b/234009"
+          },
+          "safari_ios": "mirror",
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        }
+      }
+    },
+    {
+      "path": "api/VisualViewport.json",
+      "sha256": "98995ba71be4cd05a90847b9347095f0dda322b24399c6ba55750592e9dd7e47",
+      "records": {
+        "VisualViewport": {
+          "support": {
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "61"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "91"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/VisualViewport.json"
+    },
+    {
+      "path": "api/VirtualKeyboard.json",
+      "sha256": "caa73ce2d0603cf257a14933aa1e92bb23f6a35a08897163cad1073ab35444a4",
+      "records": {
+        "VirtualKeyboard": {
+          "support": {
+            "safari": {
+              "version_added": false,
+              "impl_url": "https://webkit.org/b/230225"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "94"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": false,
+              "impl_url": "https://bugzil.la/1730568"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/VirtualKeyboard.json"
+    },
+    {
+      "path": "api/Navigation.json",
+      "sha256": "562a8a1ee44e77a11a9f8be95a6f5350695300bd8e839b9ceb6ec053614f5849",
+      "records": {
+        "Navigation": {
+          "support": {
+            "safari": {
+              "version_added": "26.2"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "102"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "147"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigation"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/Navigation.json"
+    },
+    {
+      "path": "api/SyncManager.json",
+      "sha256": "a6577c43577f82ebd31543e4fde9274f282f3007a62921dbe6af778905ee033d",
+      "records": {
+        "SyncManager": {
+          "support": {
+            "safari": {
+              "version_added": false,
+              "impl_url": "https://webkit.org/b/182565"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "49"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": false
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncManager"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/SyncManager.json"
+    },
+    {
+      "path": "api/Notification.json",
+      "sha256": "f31a82762c31ea2e30ae9b242df09e4a7c514c84832410431a89bb48f2eb1fe3",
+      "records": {
+        "Notification": {
+          "support": {
+            "safari": {
+              "version_added": "7"
+            },
+            "safari_ios": {
+              "version_added": "16.4",
+              "partial_implementation": true,
+              "notes": [
+                "The `Notification` interface is undefined, unless the page is a web app saved to the home screen. The app's manifest must have a non-default `display` value.",
+                "A notification can only be sent from a service worker. To show a notification, see [`ServiceWorkerRegistration.showNotification()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification)."
+              ]
+            },
+            "chrome": {
+              "version_added": "20",
+              "notes": [
+                "Starting in Chrome 49, notifications do not work in incognito mode.",
+                "Before Chrome 42, service worker additions were not supported."
+              ]
+            },
+            "chrome_android": {
+              "version_added": "42",
+              "partial_implementation": true,
+              "notes": "A notification can only be sent from a service worker. To show a notification, see [`ServiceWorkerRegistration.showNotification()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification)."
+            },
+            "firefox": [
+              {
+                "version_added": "22"
+              },
+              {
+                "prefix": "moz",
+                "version_added": "4"
+              }
+            ]
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/Notification.json"
+    },
+    {
+      "path": "api/Clipboard.json",
+      "sha256": "942b40b21d6e4ea55ac252e69b4e543f98fb02b2e374f84d4610a3a83f5c015e",
+      "records": {
+        "writeText": {
+          "support": {
+            "safari": {
+              "version_added": "13.1",
+              "notes": "This method must be called within user gesture event handlers."
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "66",
+              "notes": [
+                "From version 107, this method must be called within user gesture event handlers, or the user must grant the `clipboard-write` permission.",
+                "Before version 107, the user must grant the `clipboard-write` permission."
+              ]
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "63",
+              "notes": [
+                "This method must be called within user gesture event handlers.",
+                "Web extensions with the `clipboardWrite` permission in their manifest can write data without a user gesture."
+              ]
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clipboard/writeText"
+        },
+        "readText": {
+          "support": {
+            "safari": {
+              "version_added": "13.1"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "66",
+              "notes": "The user must grant the `clipboard-read` permission."
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "125",
+              "notes": [
+                "This method must be called within user gesture event handlers.",
+                "A paste prompt is displayed when the clipboard is read. If the clipboard contains same-origin content, the prompt is suppressed.",
+                "Web extensions with the `clipboardRead` permission in their manifest can read data without the paste prompt displaying. Prior to Firefox 147, extensions without this permission were unable to read clipboard data."
+              ]
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clipboard/readText"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/Clipboard.json"
+    },
+    {
+      "path": "api/StorageManager.json",
+      "sha256": "5c5155190288ef0b43c584c31c518bbcef8227e15881065171b6cc4c9a06fa3a",
+      "records": {
+        "persist": {
+          "support": {
+            "safari": {
+              "version_added": "15.2"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "55"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "57"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/persist"
+        },
+        "estimate": {
+          "support": {
+            "safari": {
+              "version_added": "17"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "61"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "57"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/estimate"
+        },
+        "getDirectory": {
+          "support": {
+            "safari": {
+              "version_added": "15.2"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "86"
+            },
+            "chrome_android": {
+              "version_added": "109"
+            },
+            "firefox": {
+              "version_added": "111"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/getDirectory"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/api/StorageManager.json"
+    },
+    {
+      "path": "css/properties/animation-timeline.json",
+      "sha256": "4c88f03ec4baf22a6f6d5b327d5af427756d590e0ce4eb6589f62a5ebabdc3c2",
+      "records": {
+        "animation-timeline": {
+          "support": {
+            "safari": {
+              "version_added": "26"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "115"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "159"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/animation-timeline"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/animation-timeline.json"
+    },
+    {
+      "path": "css/properties/anchor-name.json",
+      "sha256": "5193939a0dc9831ad03c37bb5d4608cba02840be75c48bc1c17dcb7ddd519e34",
+      "records": {
+        "anchor-name": {
+          "support": {
+            "safari": {
+              "version_added": "26"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "125"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "147"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/anchor-name"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/anchor-name.json"
+    },
+    {
+      "path": "css/properties/scrollbar-gutter.json",
+      "sha256": "9f510f4f5e9c16cc0b7712ce2f073eb981e840ec35c724c347616f8ca0274d06",
+      "records": {
+        "scrollbar-gutter": {
+          "support": {
+            "safari": {
+              "version_added": "18.2"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "94"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "97"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/scrollbar-gutter"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/scrollbar-gutter.json"
+    },
+    {
+      "path": "css/properties/overscroll-behavior.json",
+      "sha256": "6c0343116f62fed51f6944db176062c4d2e157faa2ca195043d5edb986c28cd8",
+      "records": {
+        "overscroll-behavior": {
+          "support": {
+            "safari": {
+              "version_added": "16",
+              "impl_url": "https://webkit.org/b/243452",
+              "partial_implementation": true,
+              "notes": "The property has no effect on scroll containers that have no scrollable overflow."
+            },
+            "safari_ios": "mirror",
+            "chrome": [
+              {
+                "version_added": "144"
+              },
+              {
+                "version_added": "63",
+                "version_removed": "144",
+                "partial_implementation": true,
+                "notes": "The property has no effect on scroll containers that have no scrollable overflow."
+              }
+            ],
+            "chrome_android": "mirror",
+            "firefox": [
+              {
+                "version_added": "150"
+              },
+              {
+                "version_added": "59",
+                "version_removed": "150",
+                "partial_implementation": true,
+                "notes": "The property has no effect on scroll containers that have no scrollable overflow."
+              }
+            ]
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/overscroll-behavior"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/overscroll-behavior.json"
+    },
+    {
+      "path": "css/properties/overflow-anchor.json",
+      "sha256": "ce6744d7449f4bf8f3575701778b7c599c213b17419fc4c055a453a4ad150b82",
+      "records": {
+        "overflow-anchor": {
+          "support": {
+            "safari": {
+              "version_added": "27"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "56"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "66"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/overflow-anchor"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/overflow-anchor.json"
+    },
+    {
+      "path": "css/properties/content-visibility.json",
+      "sha256": "9a98287102b3478ec458b40791487e30e9e189218323999384add1b1fd3aa725",
+      "records": {
+        "content-visibility": {
+          "support": {
+            "safari": {
+              "version_added": "18"
+            },
+            "safari_ios": "mirror",
+            "chrome": {
+              "version_added": "85"
+            },
+            "chrome_android": "mirror",
+            "firefox": {
+              "version_added": "125"
+            }
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/content-visibility"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/content-visibility.json"
+    },
+    {
+      "path": "css/properties/appearance.json",
+      "sha256": "b43322c1b518c48ccc252f22079962632239d615c9903272bdfb19f733ef12d1",
+      "records": {
+        "appearance": {
+          "support": {
+            "safari": [
+              {
+                "version_added": "15.4"
+              },
+              {
+                "prefix": "-webkit-",
+                "version_added": "3"
+              }
+            ],
+            "safari_ios": [
+              {
+                "version_added": "15.4"
+              },
+              {
+                "prefix": "-webkit-",
+                "version_added": "1"
+              }
+            ],
+            "chrome": [
+              {
+                "version_added": "84"
+              },
+              {
+                "prefix": "-webkit-",
+                "version_added": "1"
+              }
+            ],
+            "chrome_android": "mirror",
+            "firefox": [
+              {
+                "version_added": "80"
+              },
+              {
+                "prefix": "-webkit-",
+                "version_added": "64"
+              },
+              {
+                "prefix": "-moz-",
+                "version_added": "1"
+              }
+            ]
+          },
+          "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/appearance"
+        }
+      },
+      "source_url": "https://github.com/mdn/browser-compat-data/blob/main/css/properties/appearance.json",
+      "base_select": {
+        "spec_url": "https://drafts.csswg.org/css-ui-4/#valdef-appearance-base-select",
+        "tags": [
+          "web-features:customizable-select"
+        ],
+        "support": {
+          "chrome": {
+            "version_added": "135"
+          },
+          "chrome_android": "mirror",
+          "edge": "mirror",
+          "firefox": {
+            "version_added": "149",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.select.customizable_select.enabled",
+                "value_to_set": "true"
+              },
+              {
+                "type": "preference",
+                "name": "layout.css.appearance-base.enabled",
+                "value_to_set": "true"
+              }
+            ],
+            "impl_url": "https://bugzil.la/1974787"
+          },
+          "firefox_android": "mirror",
+          "oculus": "mirror",
+          "opera": "mirror",
+          "opera_android": "mirror",
+          "safari": {
+            "version_added": "27"
+          },
+          "safari_ios": "mirror",
+          "samsunginternet_android": "mirror",
+          "webview_android": "mirror",
+          "webview_ios": "mirror"
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    }
+  ],
+  "interpretation": "Dated compatibility data, not device testing. Preserve partial/flagged/preview/removed version conditions. Main may include future-version entries. mirror requires upstream resolution; do not treat it as a separately tested result."
+}
